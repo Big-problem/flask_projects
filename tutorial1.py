@@ -13,7 +13,10 @@ def user(name):
 
 @app.route("/admin")
 def admin(): # Redirect the page tp the function instde ""
-    return redirect(url_for("index"))
+    # return redirect(url_for("index"))
+    
+# Redirect to a function that needs a parameter
+    return redirect(url_for("user", name="Admin"))
 
 
 # Run the app
