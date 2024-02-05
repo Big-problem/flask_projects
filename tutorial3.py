@@ -1,0 +1,10 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def index(): # Extend the html file from the base.html
+    return render_template("extend.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
